@@ -11,7 +11,6 @@ HOMEPAGE="https://github.com/geostarling/lxc-templates"
 EGIT_REPO_URI="https://github.com/geostarling/lxc-templates.git"
 EGIT_COMMIT="${PV}"
 DEST_DIR="/usr/share/lxc"
-LXC_TEMPLATE_CONFIG="${DEST_DIR}/config"
 
 KEYWORDS="~amd64 ~arm ~arm64"
 
@@ -20,26 +19,11 @@ SLOT="0"
 
 RDEPEND="app-emulation/lxc"
 
-#DEPEND="${RDEPEND}"
-
 DOCS=(README LICENSE)
-
-src_prepare() {
-
-    mkdir -p "${T}/templates"
-
-    sed -e "s|@LXC_TEMPLATE_CONFIG@|${LXC_TEMPLATE_CONFIG}|" \
-	-e "s|@LOCALSTATEDIR@|${LOCALSTATEDIR}|" \
-	${S}/templates/* > ${T}/templates/ \
-	|| die "failed to filter templates"
-
-}
 
 src_install() {
 	default
 
-	insinto ${T}/templates
-	doins templates/*
 	insinto ${DEST_DIR}/hooks
 	doins hooks/*
 	insinto ${DEST_DIR}/config
