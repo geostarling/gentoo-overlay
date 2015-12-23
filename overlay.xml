@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>geostarling</name>
+    <description>A Gentoo overlay</description>
+	<homepage>https://github.com/geostarling/gentoo-overlay/</homepage>
+	<owner>
+		<name>Czech Technical University in Prague</name>
+		<email>geostarling@gmail.com</email>
+	</owner>
+    <source type="git">git://github.com/geostarling/gentoo-overlay.git</source>
+    <feed>https://github.com/geostarling/gentoo-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
