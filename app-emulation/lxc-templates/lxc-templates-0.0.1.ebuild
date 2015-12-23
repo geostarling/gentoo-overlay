@@ -11,6 +11,7 @@ HOMEPAGE="https://github.com/geostarling/lxc-templates"
 EGIT_REPO_URI="https://github.com/geostarling/lxc-templates.git"
 EGIT_COMMIT="${PV}"
 DEST_DIR="/usr/share/lxc"
+LXC_TEMPLATE_CONFIG="${DEST_DIR}/config"
 
 KEYWORDS="~amd64 ~arm ~arm64"
 
@@ -27,7 +28,8 @@ src_prepare() {
 
     mkdir -p "${T}/templates"
 
-    sed -e "s|@HOME@|${DEST_DIR}|" \
+    sed -e "s|@LXC_TEMPLATE_CONFIG@|${LXC_TEMPLATE_CONFIG}|" \
+	-e "s|@LOCALSTATEDIR@|${LOCALSTATEDIR}|" \
 	${S}/templates/* > ${T}/templates/ \
 	|| die "failed to filter templates"
 
