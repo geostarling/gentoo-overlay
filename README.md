@@ -13,16 +13,6 @@ List of ebuilds
 Usage
 -----
 
-### Layman
-
-This overlay is on the [Gentoo Overlays](https://overlays.gentoo.org/) list, so you can easily add it to your system using [Layman](https://wiki.gentoo.org/wiki/Layman):
-
-```sh
-layman -a geostarling
-```
-
-To synchronize it, run: `layman -s geostarling`.
-
 ### Portage
 
 Starting with sys-apps/portage-2.2.16, Portage now has a new modular plug-in [sync system](https://wiki.gentoo.org/wiki/Project:Portage/Sync).
