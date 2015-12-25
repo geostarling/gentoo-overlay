@@ -23,8 +23,8 @@ DOCS=(README.md LICENSE)
 src_install() {
 	default
 
-	insinto ${DEST_DIR}/hooks
-	doins hooks/*
+	into ${DEST_DIR}/hooks
+	dobin hooks/*
 	insinto ${DEST_DIR}/config
 	doins config/*
 }
