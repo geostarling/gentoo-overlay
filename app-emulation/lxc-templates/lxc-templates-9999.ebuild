@@ -9,7 +9,6 @@ inherit eutils versionator git-r3
 DESCRIPTION="LinuX Containers templates"
 HOMEPAGE="https://github.com/geostarling/lxc-templates"
 EGIT_REPO_URI="https://github.com/geostarling/lxc-templates.git"
-EGIT_COMMIT="${PV}"
 DEST_DIR="/usr/share/lxc"
 
 KEYWORDS="~amd64 ~arm ~arm64"
@@ -19,7 +18,7 @@ SLOT="0"
 
 RDEPEND="app-emulation/lxc"
 
-DOCS=(README LICENSE)
+DOCS=(README.md LICENSE)
 
 src_install() {
 	default
