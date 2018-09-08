@@ -14,6 +14,8 @@ IUSE="xrandr tmux"
 
 DEPEND=""
 RDEPEND="
+	x11-apps/xwininfo
+	x11-misc/xdotool
 	xrandr? ( x11-apps/xrandr )
 	tmux? ( app-misc/tmux )
 	${DEPEND}
