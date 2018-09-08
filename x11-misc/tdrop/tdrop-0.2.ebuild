@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="A Glorified WM-Independent Dropdown Creator"
 HOMEPAGE="https://github.com/noctuid/tdrop"
-SRC_URI="${HOMEPAGE}/archive/v${PV}.tar.gz"
+SRC_URI="${HOMEPAGE}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
